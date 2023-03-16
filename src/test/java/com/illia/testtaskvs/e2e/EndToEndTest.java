@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @SqlGroup({
         @Sql(value = "classpath:init.sql", executionPhase = BEFORE_TEST_METHOD),
-        @Sql(value = "classpath:init.sql", executionPhase = AFTER_TEST_METHOD)
+        @Sql(value = "classpath:destroy.sql", executionPhase = AFTER_TEST_METHOD)
 })
 public class EndToEndTest {
 
