@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     public UserDTO getUser(long userId) throws RequestProcessingException {
         return userRepository.findById(userId)

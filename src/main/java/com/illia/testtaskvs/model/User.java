@@ -20,16 +20,16 @@ public class User {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    long id;
+    private long id;
 
     @Column(name = "f_name")
-    String firstName;
+    private String firstName;
 
     @Column(name = "l_name")
-    String lastName;
+    private String lastName;
 
     @Column(name = "date_of_birth")
-    LocalDate dateOfBirth;
+    private LocalDate dateOfBirth;
 
     public UserDTO parseDTO() {
         return UserDTO.builder()

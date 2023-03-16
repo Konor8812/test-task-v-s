@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class MyController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @GetMapping(value = "user/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<UserDTO> getUserInfo(@PathVariable(name = "id") long id) throws RequestProcessingException {
